@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 
 def index(request):
@@ -7,5 +8,4 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'boldmessage': 'This tutorial has been put together by Joe.'}
-    return render(request, 'rango/about.html', context=context_dict)
+    return render(request, 'rango/about.html')
